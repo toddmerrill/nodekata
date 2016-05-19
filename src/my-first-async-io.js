@@ -1,5 +1,5 @@
 var projDir = 'D:/dev/src/firstnode/src/';
-var fileName = 'myFirstAsyncIo.js';
+var fileName = 'my-first-async-io.js';
 var fs = require('fs');
 
 var callback = function (err, code) {
