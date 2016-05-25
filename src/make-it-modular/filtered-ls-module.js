@@ -3,7 +3,7 @@ module.exports = function(directory,ext,callback) {
 
     fs.readdir(directory, function (err, data) {
         var result = [];
-        for (value of data) {
+        for (var value of data) {
             if (value.endsWith(ext)) {
                 result.push(value);
             }
