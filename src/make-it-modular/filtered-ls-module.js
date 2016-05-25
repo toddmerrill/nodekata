@@ -10,4 +10,4 @@ module.exports = function(directory,ext,callback) {
         }
         callback(null, result);
     })
-}
+};
