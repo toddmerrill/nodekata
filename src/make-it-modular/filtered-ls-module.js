@@ -3,9 +3,9 @@ module.exports = function(directory,ext,callback) {
 
     fs.readdir(directory, function (err, data) {
         var result = [];
-        for (key in data) {
-            if (data[key].endsWith(ext)) {
-                result.push(data[key]);
+        for (value of data) {
+            if (value.endsWith(ext)) {
+                result.push(value);
             }
         }
         callback(null, result);
