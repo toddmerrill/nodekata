@@ -1,13 +1,10 @@
-var projDir = 'D:/dev/src/firstnode/src/';
-var fileName = 'my-first-async-io.js';
 var fs = require('fs');
 
 var callback = function (err, code) {
     if (err) {
-        console.log(err);
-    } else {
-        console.log('this file:\n\n' + code + '\nlines: ' + code.split('\n').length);
+        return console.log(err);
     }
+    console.log(code.split('\n').length - 1);
 }
 
-fs.readFile(projDir + fileName, 'utf-8', callback);
+fs.readFile(process.argv[2], 'utf-8', callback);
