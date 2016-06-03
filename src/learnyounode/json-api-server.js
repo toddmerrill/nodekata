@@ -1,9 +1,7 @@
 var http = require('http');
 var url = require('url')
-var querystring = require('querystring')
 
 var port = process.argv[2];
-//var port = 99;
 
 var server = http.createServer((request, response) => {
     var result = {};
@@ -12,19 +10,27 @@ var server = http.createServer((request, response) => {
         var iso = parsedUrl.query['iso'];
         var date = new Date(iso);
         if (parsedUrl.pathname == '/api/parsetime') {
-            console.log('date:' + date.getTime());
-            result.hour = date.getHours();
-            result.minute = date.getMinutes();
-            result.second = date.getSeconds();
+            result = parseTime(date)
         }
         if (parsedUrl.pathname == '/api/unixtime') {
-            console.log('date:' + date.getTime());
-            result.unixtime = date.getTime();
+            result = unixTime(date);
         }
     }
     response.writeHead(200, {'Content-Type': 'application/json'})
     response.end(JSON.stringify(result));
 });
+
+function parseTime(date) {
+    return {
+        hour: date.getHours(),
+        minute: date.getMinutes(),
+        second: date.getSeconds()
+    }
+}
+
+function unixTime(date) {
+    return { unixtime: date.getTime() };l
+}
 
 server.on('error', (err) => {
     throw err;
