@@ -1,6 +1,6 @@
 var assert = require('chai').assert;
 
-var getDependencies =  require('../../src/functionaljavascript/recursion.js');
+var getDependencies =  require('../../src/functionaljavascript/recursion');
 
 var loremIpsum = {
     "name": "lorem-ipsum",
