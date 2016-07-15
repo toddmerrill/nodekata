@@ -1,4 +1,6 @@
 var assert = require('chai').assert;
+var mocha = require('mocha');
+
 
 var repeat =  require('../../src/functionaljavascript/blocking-event-loop.js');
 

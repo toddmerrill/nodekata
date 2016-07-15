@@ -1,0 +1,25 @@
+{
+  "name": "firstnode",
+  "version": "0.0.1",
+  "description": "All node sample code",
+  "main": "index.js",
+  "directories": {
+    "test": "test/functionaljavascript"
+  },
+  "dependencies": {
+    "how-to-npm": "^2.0.0"
+  },
+  "devDependencies": {
+    "chai": "^3.5.0",
+    "mocha": "^2.5.3"
+  },
+  "scripts": {
+    "test": "mocha test/functionaljavascript/*"
+  },
+  "repository": {
+    "type": "git",
+    "url": "ssh://todd@toddmerrill.com/home/todd/git/firstnode.git"
+  },
+  "author": "Todd Merrill",
+  "license": "ISC"
+}
