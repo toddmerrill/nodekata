@@ -1,0 +1,13 @@
+{
+  "name": "@toddmerrill/howtonpm",
+  "version": "0.0.2",
+  "description": "test-project",
+  "main": "index.js",
+  "repository": "http://localhost/bla",
+  "scripts": {
+    "test": "node test.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {}
+}
