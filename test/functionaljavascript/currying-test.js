@@ -16,6 +16,7 @@ describe('curry N params', function () {
         assert.equal(curryA(3), 6);
         assert.equal(curryA(10), 13);
         assert.equal(curryN(add3)(1)(2)(3), 6);
+        assert.equal(curryN(add3)(1,2)(3), 6);
 
     });
 });

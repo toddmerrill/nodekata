@@ -1,10 +1,13 @@
 function curryN(fn, n) {
-    var n = n || fn.length;
-    if (n == 0) {
-        return fn();
-    } else {
-        return function(arg) {
-            return curryN(fn.bind(fn, arg), n-1);
+    var arity = n || fn.length;
+    return arity === 0 ? fn.apply(null) : function resolve() {
+        var resolveArgs = Array.prototype.slice.call(arguments);
+        if (resolveArgs.length >= arity) {
+            return fn.apply(null, resolveArgs);
+        }
+        return function recurse() {
+            var recurseArgs = Array.prototype.slice.call(arguments);
+            return resolve.apply(null, resolveArgs.concat(recurseArgs));
         }
     }
 }

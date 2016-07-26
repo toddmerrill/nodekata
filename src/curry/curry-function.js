@@ -4,11 +4,10 @@ var curriedFunction = function(fn) {
         var outerArgs = Array.prototype.slice.call(arguments);
         if (outerArgs.length >= arity) {
             return fn.apply(null, outerArgs);
-        } else {
-            return function inner() {
-                var innerArgs = Array.prototype.slice.call(arguments);
-                return outer.apply(null, outerArgs.concat(innerArgs));
-            }
+        }
+        return function inner() {
+            var innerArgs = Array.prototype.slice.call(arguments);
+            return outer.apply(null, outerArgs.concat(innerArgs));
         }
     }
 }
