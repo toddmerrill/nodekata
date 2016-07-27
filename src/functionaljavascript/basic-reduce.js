@@ -1,14 +1,10 @@
-function countWords(inputWords) {
-    return inputWords.reduce(function (result, item) {
-        result[item] = result[item] ? result[item] + 1 : 1;
+function countWords(inputWords, result) {
+    var result = result || {};
+    if (inputWords.length == 0) {
         return result;
-    },{});
+    }
+    result[inputWords[0]] = result[inputWords[0]] ? result[inputWords[0]] + 1 : 1;
+    return countWords(inputWords.slice(1), result);
 }
 
 module.exports = countWords;
-
-/*
-var input = ['pizza', 'toilet', 'bla', 'pizza', 'bla', 'bloo', 'toilet'];
-
-console.log(countWords(input));
-*/
