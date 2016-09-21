@@ -1,14 +1,15 @@
 function curryN(fn, n) {
     var arity = n || fn.length;
-    return arity === 0 ? fn.call(null) : function outer() {
-        var outerArgs = argsArray(arguments);
-        return outerArgs.length >= arity ? fn.apply(null, outerArgs) : function() {
-            return outer.apply(null, outerArgs.concat(argsArray(arguments)));
+    return arity === 0 ? fn.apply(fn) : function resolveOrCurry() {
+        var outerArgs = Array.prototype.slice.call(arguments);
+        if (outerArgs.length >= arity) {
+            return fn.apply(fn, outerArgs);
         }
-    };
+        return function() {
+            var innerArgs = Array.prototype.slice.call(arguments);
+            return resolveOrCurry.apply(fn, outerArgs.concat(innerArgs));
+        }
+    }
 }
 
-function argsArray(args) {
-    return Array.prototype.slice.call(args);
-}
 module.exports = curryN
