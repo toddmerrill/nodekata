@@ -1,6 +1,3 @@
-/**
- * Created by todd on 9/5/16.
- */
 var assert = require('chai').assert;
 
 var promise = require('../../src/promiseitwonthurt/fulfill-a-promise');

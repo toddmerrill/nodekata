@@ -4,7 +4,7 @@
   "description": "All node sample code",
   "main": "index.js",
   "directories": {
-    "test": "test/functionaljavascript"
+    "test": "test"
   },
   "dependencies": {
     "how-to-npm": "^2.0.0",
@@ -15,7 +15,7 @@
     "mocha": "^2.5.3"
   },
   "scripts": {
-    "test": "mocha test/functionaljavascript/*"
+    "test": "mocha test/funfunfunction/*"
   },
   "repository": {
     "type": "git",
