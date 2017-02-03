@@ -4,6 +4,7 @@ var curryN = require('../../src/functionaljavascript/currying');
 
 describe('curry N params', function () {
     it('adds three numbers', function () {
+        console.log('')
         assert.equal(curryN(function(){return 5;}), 5);
         assert.equal(curryN(function(one){return one;})(7), 7);
 

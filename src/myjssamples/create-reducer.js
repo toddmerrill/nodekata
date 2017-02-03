@@ -1,3 +1,5 @@
+// code from a question on javascript slack channel
+
 const SET_SEARCHED_RECIPES = 'SET_SEARCHED_RECIPES';
 
 const createReducer = function(initialState, handlers) {
@@ -38,6 +40,4 @@ const myObj = {['hi'](){
     }
 };
 
-
-const x = myObj.hi('bla');
-console.log('x:',x);
+module.exports = createReducer;
