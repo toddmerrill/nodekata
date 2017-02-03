@@ -15,7 +15,7 @@
     "mocha": "^2.5.3"
   },
   "scripts": {
-    "test": "mocha test/funfunfunction/*"
+    "test": "mocha test/functionaljavascript/curry*.js"
   },
   "repository": {
     "type": "git",

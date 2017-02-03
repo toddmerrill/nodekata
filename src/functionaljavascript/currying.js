@@ -1,13 +1,12 @@
 function curryN(fn, n) {
-    var arity = n || fn.length;
-    return arity === 0 ? fn.call() : function outer() {
+    const arity = n || fn.length;
+    return arity <= arguments.length ? fn(...arguments) : function outer() {
         var outerArgs = [...arguments];
-        if (outerArgs.length >= arity) {
-            return fn.apply(null, outerArgs);
+        if (arity <= outerArgs.length) {
+            return fn(...outerArgs);
         }
-        return function inner() {
-            var innerArgs = [...arguments];
-            return outer.apply(null, outerArgs.concat(innerArgs));
+        return function() {
+            return outer(...outerArgs.concat(...arguments));
         }
     }
 }
