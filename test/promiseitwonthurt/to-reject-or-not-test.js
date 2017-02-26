@@ -5,7 +5,7 @@ const assert = chai.assert;
 
 var toRejectOrNot = require('../../src/promiseitwonthurt/to-reject-or-not');
 
-describe('reject a Promise', function () {
+describe('Both resolve and reject can\'t be called', function () {
     it('promise returns \'I FIRED\'', function () {
         return assert.eventually.equal(toRejectOrNot.then(), 'I FIRED');
     });
