@@ -1,7 +1,9 @@
 'use strict';
 
-var promise = new Promise(function (fulfill, reject) {
-    return fulfill ? "FULFILLED!" : "REJECTED!";
-});
+const fulfillIt = new Promise(function (resolve, reject) {
+    setTimeout(() => {resolve("FULFILLED!")},300);
+})
 
-// Your solution here
+fulfillIt.then(console.log)
+
+module.exports = fulfillIt;
