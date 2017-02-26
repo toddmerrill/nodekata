@@ -13,10 +13,11 @@
   },
   "devDependencies": {
     "chai": "^3.5.0",
+    "chai-as-promised": "^6.0.0",
     "mocha": "^2.5.3"
   },
   "scripts": {
-    "test": "mocha --recursive test"
+    "test": "mocha --recursive test/promiseitwonthurt"
   },
   "repository": {
     "type": "git",
