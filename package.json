@@ -18,7 +18,7 @@
     "mocha": "^2.5.3"
   },
   "scripts": {
-    "test": "mocha --recursive test/promiseitwonthurt"
+    "test": "mocha --recursive test/count-to-6"
   },
   "repository": {
     "type": "git",
