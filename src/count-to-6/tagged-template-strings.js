@@ -8,6 +8,7 @@ const safe = str => str.replace(/&/g, "&amp;")
                        .replace(/>/g, "&gt;")
                        .replace(/'/g, "&apos;");
 
-console.log(tagged`<b>${process.argv[2]} says</b>: "${process.argv[3]}"`);
+// To verify in workshopper, uncomment below
+// console.log(tagged`<b>${process.argv[2]} says</b>: "${process.argv[3]}"`);
 
 module.exports = tagged;

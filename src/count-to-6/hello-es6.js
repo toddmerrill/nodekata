@@ -1,1 +1,2 @@
-console.log("HELLO ES6")
+// To verify in workshopper, uncomment below
+// console.log("HELLO ES6")

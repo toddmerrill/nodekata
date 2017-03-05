@@ -3,6 +3,7 @@ const arrowFunctions = (input) => {
     return `[${input}] becomes "${transformed}"`
 }
 
-console.log(arrowFunctions(process.argv.slice(2)));
+// To verify in workshopper, uncomment below
+// console.log(arrowFunctions(process.argv.slice(2)));
 
 module.exports = arrowFunctions;

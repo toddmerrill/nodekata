@@ -4,6 +4,7 @@ const destructuring = input => {
     return conf;
 }
 
-console.log(destructuring(process.argv.slice(2)));
+// To verify in workshopper, uncomment below
+// console.log(destructuring(process.argv.slice(2)));
 
 module.exports = destructuring;

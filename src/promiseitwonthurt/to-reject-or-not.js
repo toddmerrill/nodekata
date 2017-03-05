@@ -7,6 +7,7 @@ const toRejectOrNot = new Promise(function (resolve, reject) {
 
 const onReject = function(error) { console.log(error.message); };
 
-toRejectOrNot.then(console.log, onReject);
+// To verify in workshopper, uncomment below
+// toRejectOrNot.then(console.log, onReject);
 
 module.exports = toRejectOrNot;

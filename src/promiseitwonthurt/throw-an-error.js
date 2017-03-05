@@ -11,6 +11,7 @@ const parsedPromise = (json) => {
     }
 }
 
-parsedPromise(process.argv[2]).catch(console.log);
+// To verify in workshopper, uncomment below
+// parsedPromise(process.argv[2]).catch(console.log);
 
 module.exports = parsedPromise;
